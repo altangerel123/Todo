@@ -52,26 +52,28 @@
       <div class="addtask2">
         <div class="addtask">
           <form>
+            <button class="flex">x</button>
             <h2>Add task</h2>
             <p>Title</p>
-            <input class="put" type="text" name="title" />
+            <input class="put" type="text" name="title" required />
             <p>Description</p>
             <textarea
               class="put"
               name="Description"
               cols="30"
               rows="10"
+              required
             ></textarea>
             <p>Status</p>
-            <select class="put" name="Status">
+            <select class="put" name="Status" required>
               <option value=""></option>
-              <option value="todo">Todo</option>
-              <option value="opel">In progress</option>
-              <option value="audi">Stuck</option>
-              <option value="audi">Done</option>
+              <option value="Todo">Todo</option>
+              <option value="In progress">In progress</option>
+              <option value="Stuck">Stuck</option>
+              <option value="Done">Done</option>
             </select>
             <p>Priority</p>
-            <select class="put" name="Priority" id="cars">
+            <select class="put" name="Priority" id="cars" required>
               <option value=""></option>
               <option value="low">Low</option>
               <option value="medium">Medium</option>

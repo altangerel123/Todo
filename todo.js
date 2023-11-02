@@ -1,10 +1,20 @@
-const todo2 = document.querySelector(".todo2");
+const todo2 = document.querySelectorAll(".todo2");
 const form = document.querySelector("form");
 const container = document.querySelector(".container");
-const todoCard = document.querySelector(".todoCard");
+const todoCard = document.querySelectorAll(".todoCard");
+const flex = document.querySelector(".flex");
+flex.addEventListener("click", () => {
+  addtask2;
+});
 
-todo2.addEventListener("click", () => {
-  document.querySelector(".addtask2").style.display = "flex";
+// todo2.addEventListener("click", () => {
+//   document.querySelector(".addtask2").style.display = "flex";
+// });
+
+todo2.forEach((button) => {
+  button.addEventListener("click", () => {
+    document.querySelector(".addtask2").style.display = "flex";
+  });
 });
 
 form.addEventListener("submit", (event) => {
@@ -12,9 +22,7 @@ form.addEventListener("submit", (event) => {
   const formElement = event.target;
   console.log(formElement);
 
-  const elements = event.target.elements;
-
-  console.log(elements);
+  const { elements } = event.target;
 
   // todoCard
 
@@ -26,12 +34,12 @@ form.addEventListener("submit", (event) => {
   cardTitle.textContent = elements.title.value;
   card1.appendChild(cardTitle);
 
-  const carDelete = document.createElement("img");
-  carDelete.src = "trash.png";
-  carDelete.className = "carDelete";
-  cardTitle.appendChild(carDelete);
+  const cardDelete = document.createElement("img");
+  cardDelete.src = "trash.png";
+  cardDelete.className = "carDelete";
+  cardTitle.appendChild(cardDelete);
 
-  carDelete.addEventListener("click", () => {
+  cardDelete.addEventListener("click", () => {
     card1.remove();
   });
 
@@ -40,12 +48,25 @@ form.addEventListener("submit", (event) => {
   cardDescription.textContent = elements.Description.value;
   card1.appendChild(cardDescription);
 
+  // const cardStatus = document.createElement("p");
+  // cardStatus.className = "cardStatus";
+  // cardStatus.textContent = elements.Status.value;
+  // card1.appendChild(cardStatus);
+
   const cardPriority = document.createElement("p");
   cardPriority.className = "cardPriority";
   cardPriority.textContent = elements.Priority.value;
   card1.appendChild(cardPriority);
 
-  todoCard.appendChild(card1);
+  if (elements.Status.value == "Todo") {
+    todoCard[0].appendChild(card1);
+  } else if (elements.Status.value == "In progress") {
+    todoCard[1].appendChild(card1);
+  } else if (elements.Status.value == "Stuck") {
+    todoCard[2].appendChild(card1);
+  } else if (elements.Status.value == "Done") {
+    todoCard[3].appendChild(card1);
+  }
 
   document.querySelector(".addtask2").style.display = "none";
 });
