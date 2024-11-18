@@ -11,9 +11,8 @@
     />
   </head>
   <body>
-    <div class="container">
+    <div class="container">w
       <div class="secsion">
-        <img src="photo.avif" alt="" />
         <div class="todo_secsion">
           <div class="todo">
             <h1>Todo</h1>
@@ -52,20 +51,16 @@
       <div class="addtask2">
         <div class="addtask">
           <form>
-            <button class="flex">x</button>
-            <h2>Add task</h2>
+            <div class="Card_Head">
+              <h2>Add task</h2>
+              <button class="flex">x</button>
+            </div>
             <p>Title</p>
-            <input class="put" type="text" name="title" required />
+            <input class="put" type="text" name="title" />
             <p>Description</p>
-            <textarea
-              class="put"
-              name="Description"
-              cols="30"
-              rows="10"
-              required
-            ></textarea>
+            <textarea class="put" name="Description" rows="5"></textarea>
             <p>Status</p>
-            <select class="put" name="Status" required>
+            <select class="put" name="Status">
               <option value=""></option>
               <option value="Todo">Todo</option>
               <option value="In progress">In progress</option>
@@ -73,7 +68,7 @@
               <option value="Done">Done</option>
             </select>
             <p>Priority</p>
-            <select class="put" name="Priority" id="cars" required>
+            <select class="put" name="Priority" id="cars">
               <option value=""></option>
               <option value="low">Low</option>
               <option value="medium">Medium</option>
