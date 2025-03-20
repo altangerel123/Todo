@@ -7,10 +7,6 @@ flex.addEventListener("click", () => {
   addtask2;
 });
 
-// todo2.addEventListener("click", () => {
-//   document.querySelector(".addtask2").style.display = "flex";
-// });
-
 todo2.forEach((button) => {
   button.addEventListener("click", () => {
     document.querySelector(".addtask2").style.display = "flex";
@@ -47,16 +43,6 @@ form.addEventListener("submit", (event) => {
   cardDescription.className = "cardDescription";
   cardDescription.textContent = elements.Description.value;
   card1.appendChild(cardDescription);
-
-  // const cardStatus = document.createElement("p");
-  // cardStatus.className = "cardStatus";
-  // cardStatus.textContent = elements.Status.value;
-  // card1.appendChild(cardStatus);
-
-  const cardPriority = document.createElement("p");
-  cardPriority.className = "cardPriority";
-  cardPriority.textContent = elements.Priority.value;
-  card1.appendChild(cardPriority);
 
   if (elements.Status.value == "Todo") {
     todoCard[0].appendChild(card1);

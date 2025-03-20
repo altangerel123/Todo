@@ -11,49 +11,48 @@
     />
   </head>
   <body>
-    <div class="container">
-      <div class="secsion">
-        <img src="photo.avif" alt="" />
-        <div class="todo_secsion">
-          <div class="todo">
-            <h1>Todo</h1>
-            <div class="todoCard"></div>
-            <div class="todo2">
-              <i class="fa-solid fa-plus"></i>
-              <p>Add card</p>
-            </div>
+    <div>
+      <div class="todo_secsion">
+        <div class="todo">
+          <h2>Todo</h2>
+          <div class="todoCard"></div>
+          <div class="todo2">
+            <i class="fa-solid fa-plus"></i>
+            <p>Add card</p>
           </div>
-          <div class="todo">
-            <h1>In progress</h1>
-            <div class="todoCard"></div>
-            <div class="todo2">
-              <i class="fa-solid fa-plus"></i>
-              <p>Add card</p>
-            </div>
+        </div>
+        <div class="todo">
+          <h2>In progress</h2>
+          <div class="todoCard"></div>
+          <div class="todo2">
+            <i class="fa-solid fa-plus"></i>
+            <p>Add card</p>
           </div>
-          <div class="todo">
-            <h1>Stuck</h1>
-            <div class="todoCard"></div>
-            <div class="todo2">
-              <i class="fa-solid fa-plus"></i>
-              <p>Add card</p>
-            </div>
+        </div>
+        <div class="todo">
+          <h2>Stuck</h2>
+          <div class="todoCard"></div>
+          <div class="todo2">
+            <i class="fa-solid fa-plus"></i>
+            <p>Add card</p>
           </div>
-          <div class="todo">
-            <h1>Done</h1>
-            <div class="todoCard"></div>
-            <div class="todo2">
-              <i class="fa-solid fa-plus"></i>
-              <p>Add card</p>
-            </div>
+        </div>
+        <div class="todo">
+          <h2>Done</h2>
+          <div class="todoCard"></div>
+          <div class="todo2">
+            <i class="fa-solid fa-plus"></i>
+            <p>Add card</p>
           </div>
         </div>
       </div>
       <div class="addtask2">
         <div class="addtask">
           <form>
-            <button class="flex">x</button>
-            <h2>Add task</h2>
+            <div class="head">
+              <h2>Add task</h2>
+              <button class="flex">x</button>
+            </div>
             <p>Title</p>
             <input class="put" type="text" name="title" required />
             <p>Description</p>
@@ -61,7 +60,6 @@
               class="put"
               name="Description"
               cols="30"
-              rows="10"
               required
             ></textarea>
             <p>Status</p>
@@ -72,14 +70,7 @@
               <option value="Stuck">Stuck</option>
               <option value="Done">Done</option>
             </select>
-            <p>Priority</p>
-            <select class="put" name="Priority" id="cars" required>
-              <option value=""></option>
-              <option value="low">Low</option>
-              <option value="medium">Medium</option>
-              <option value="high">High</option>
-            </select>
-            <button type="submit">Add task</button>
+            <button class="submit" type="submit">Add task</button>
           </form>
         </div>
       </div>
